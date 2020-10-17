@@ -19,7 +19,7 @@ body {
 
 .container {
     width: 100%;
-    max-width: 997px;
+    max-width: 1024px;
     margin: 0 auto;
     padding: 0 1.5em;
 }
@@ -270,6 +270,7 @@ section#overview {
     margin: .8em 0;
     border-radius: 5px;
     cursor: pointer;
+    padding: .5em 0;
 }
 
 .overview-content .nat-overview:hover {
@@ -394,6 +395,7 @@ section#overview {
 
 .dark-theme .social-dashboard-content .card:hover {
     background: hsl(230, 17%, 14%);
+
 }
 
 .dark-theme .overview-content .nat-overview:hover {
@@ -420,6 +422,10 @@ section#overview {
 
 .dark-theme .overview-content .nat-overview {
     background: hsl(228, 28%, 20%);
+}
+
+.dark-theme .overview-heading p {
+    color: hsl(228, 34%, 66%);
 }
 
 .dark-theme .overview-desc p:first-child {
