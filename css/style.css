@@ -292,12 +292,12 @@ section#overview {
 }
 
 .overview-heading .fab {
-    font-size: 1.6rem!important;
+    font-size: 1.4rem!important;
 }
 
 .light-theme .overview-heading p:first-child,
 .overview-heading p:first-child {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: bold;
 }
 
@@ -307,7 +307,7 @@ section#overview {
 
 .light-theme .overview-desc p:first-child,
 .overview-desc p:first-child {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     font-weight: bold;
 }
 
@@ -326,7 +326,6 @@ section#overview {
     background: hsl(0, 0%, 100%);
 } 
 
-/* header section [light BG] */
 .light-theme header {
     background: hsl(225, 100%, 98%);
 }
