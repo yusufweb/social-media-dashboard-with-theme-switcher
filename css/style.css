@@ -12,16 +12,17 @@ html {
 }
 
 body {
-    background: hsl(0, 0%, 100%);
+    background: hsl(230, 17%, 14%);
     font-family: 'Inter', sans-serif;
     line-height: 1.3;
+    font-size: 62.8%;
 }
 
 .container {
     width: 100%;
-    max-width: 1024px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 0 1.5em;
+    padding: 0 2em;
 }
 
 .fa-facebook-square {
@@ -52,41 +53,50 @@ body {
 }
 
 /* header section */
-.dark-theme header,
 header {
-    height: 180px;
+    background: hsl(232, 19%, 15%);
+    padding-bottom: 2.5rem;
+}
+
+header,
+.light-theme header {
     border-radius: 0 0 20px 20px;
 }
 
-/* light theme background */
-header {
-    background: hsl(225, 100%, 98%);
-}
-
 header .header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2em 0;
-    font-weight: bold;
+    width: 100%;
+    padding: 2rem 0;
 }
 
 header .header-title {
-    width: 80%;
+    width: 100%;
+    padding: 1.5rem 0;
 }
 
-header .toggle-mode {
-    width: 15%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: auto;
+header .header-title h2 {
+    font-size: 1.5rem;
+    color: hsl(0, 0%, 100%);
+    margin-bottom: 0.4rem;
 }
 
 header .header-content .total-ffw,
 header .header-content .mode-toggler {
-    color: hsl(228, 12%, 44%);
-    font-size: .8em;
+    color: hsl(228, 34%, 66%);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+header hr {
+    border-color: hsl(228, 34%, 66%);
+}
+
+/* toggle switch */
+.toggle-mode {
+    width: 100%;
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .toggle-mode .switch {
@@ -94,6 +104,10 @@ header .header-content .mode-toggler {
     display: inline-block;
     width: 55px;
     height: 28px;
+}
+
+.toggle-mode .mode-toggler {
+    width: 50%;
 }
 
 .toggle-mode .switch input {
@@ -109,7 +123,7 @@ header .header-content .mode-toggler {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: hsl(230, 22%, 74%);
+    background: linear-gradient(to right, hsl(210, 78%, 56%),hsl(146, 68%, 55%));
     transition: .4s;
     border-radius: 34px;
 }
@@ -119,53 +133,51 @@ header .header-content .mode-toggler {
     content: "";
     height: 20px;
     width: 20px;
-    right: 4px;
+    left: 4px;
     top: 4px;
     bottom: 4px;
-    background: #fff;
+    background: hsl(230, 17%, 14%);
     transition: .4s;
     border-radius: 50%;
 }
 
 /*##### when toggle button is click change ########*/
 .toggle-mode input:checked + .slider {
-    background: linear-gradient(to right, hsl(210, 78%, 56%),hsl(146, 68%, 55%));
+    background: hsl(230, 22%, 74%);
 }
 
 .toggle-mode input:checked + .slider::before {
-    transform: translateX(-26px);
-    background: hsl(230, 17%, 14%);
+    transform: translateX(26px);
+    background: #fff;
 }
 
-/* Dashboard section */
+/* dashboard section */
 #social-dashboard {
     width: 100%;
-    margin-top: -4em;
+    margin-top: -3.2rem;
     margin-bottom: 2em;
 }
 
 .social-dashboard-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    width: 100%;
 }
 
-.dark-theme .social-dashboard-content .card,
 .social-dashboard-content .card {
-    width: 23%;
+    width: 100%;
     text-align: center;
-    padding: 1.5em;
+    padding: 1.5rem;
     border-radius: 5px;
-}
-
-/* light theme */
-.social-dashboard-content .card {
-    background: hsl(227, 47%, 96%);
     cursor: pointer;
+    margin-bottom: 1.5rem;
 }
 
-.social-dashboard-content .card:hover {
-    background: hsl(225, 100%, 98%);
+.social-dashboard-content .card:hover,
+.overview-content .nat-overview:hover {
+    background: hsl(232, 19%, 15%);
+}
+
+.social-dashboard-content .card {
+    background: hsl(228, 28%, 20%);
 }
 
 .social-dashboard-content .card.facebook {
@@ -196,90 +208,78 @@ header .header-content .mode-toggler {
 
 .card-icon .fab {
     padding: 0 .3em;
-    font-size: 1.5em!important;
+    font-size: 1.5rem!important;
 }
 
-.dark-theme .card-icon p,
+.light-theme .card-icon p,
 .card-icon p {
-    font-size: .75em;
+    font-size: 0.75rem;
     font-weight: bold;
 }
 
-/* light theme */
 .card-icon p {
-    color: hsl(228, 12%, 44%);
+    color: hsl(228, 34%, 66%);
 }
 
 .card-desc {
-    padding: 1.1em 0;
+    padding: 1.1rem 0;
 }
 
-.dark-theme .card-desc h1,
+.light-theme .card-desc h1,
 .card-desc h1
 {
-    font-size: 3em;
+    font-size: 3.5rem;
 }
 
-/* light theme */
 .card-desc h1 {
-    color: hsl(230, 17%, 14%);
+    color: hsl(0, 0%, 100%);
 }
 
-.dark-theme .card-desc p,
+.light-theme .card-desc p,
 .card-desc p
 {
-    letter-spacing: 3px;
-    font-size: .7em;
+    letter-spacing: 5px;
+    font-size: 0.7rem;
     text-transform: uppercase;
 }
 
 .card-desc p {
     color: hsl(228, 12%, 44%);
+    font-weight: 700;
 }
 
 .today p {
-    font-size: .7em;
+    font-size: 0.8rem;
     font-weight: bold;
 }
 
-/* overview */
+/* overview section */
 section#overview {
-    margin: 2em 0;
+    width: 100%;
+    margin-bottom: 3rem;
 }
 
-.dark-theme .overview-title,
+.light-theme .overview-title,
 .overview-title {
-    padding: 1em 0;
+    margin: 2rem 0;
 }
 
-/* light theme */
 .overview-title {
-    color: hsl(228, 12%, 44%);
+    color: hsl(0, 0%, 100%);
+    font-size: 1.6rem;
 }
 
-.overview-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.dark-theme .overview-content .nat-overview,
+.light-theme .overview-content .nat-overview,
 .overview-content .nat-overview {
-    width: 23%;
-    margin: .8em 0;
+    width: 100%;
+    margin-bottom: 1.5rem;
     border-radius: 5px;
     cursor: pointer;
-    padding: .6em 0;
+    padding: 0.4rem 0;
 }
 
-.overview-content .nat-overview:hover {
-    background: hsl(225, 100%, 98%);
-}
-
-/* light theme */
 .overview-content .nat-overview {
-    background: hsl(227, 47%, 96%);
+    background: hsl(228, 28%, 20%);
 }
 
 .overview-heading,
@@ -288,146 +288,150 @@ section#overview {
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
-    padding: .8em 1.5em;
+    padding: 0.8rem 1.5rem;
 }
 
-.dark-theme .overview-desc p:first-child,
-.overview-desc p:first-child {
-    font-size: 1.8em;
+.overview-heading .fab {
+    font-size: 1.6rem!important;
+}
+
+.light-theme .overview-heading p:first-child,
+.overview-heading p:first-child {
+    font-size: 1rem;
     font-weight: bold;
 }
 
-/* light theme */
+.overview-heading p:first-child {
+    color: hsl(228, 34%, 66%);
+}
+
+.light-theme .overview-desc p:first-child,
 .overview-desc p:first-child {
-    color: hsl(230, 17%, 14%);
+    font-size: 2.5rem;
+    font-weight: bold;
 }
 
 .overview-desc p:last-child {
-    font-size: .7em;
+    font-size: 0.9rem;
     font-weight: bold;
 }
 
-.overview-heading .fa {
-    font-size: 1.3em!important;
+.overview-desc p:first-child {
+    color: hsl(0, 0%, 100%);
 }
 
-.dark-theme .overview-heading p:first-child,
-.overview-heading p:first-child {
-    font-size: .7em;
-    font-weight: bold;
+/*######## light-theme Mode  ###########*/
+/* light theme body */
+.light-theme {
+    background: hsl(0, 0%, 100%);
+} 
+
+/* header section [light BG] */
+.light-theme header {
+    background: hsl(225, 100%, 98%);
 }
 
-.overview-heading p:first-child {
+.light-theme header h2 {
+    color: hsl(230, 17%, 14%);
+}
+
+.light-theme header .header-content .total-ffw,
+.light-theme header .header-content .mode-toggler {
     color: hsl(228, 12%, 44%);
 }
 
-/* media query for mobile */
+.light-theme .social-dashboard-content .card {
+    background: hsl(227, 47%, 96%);
+}
 
-@media (max-width: 425px) {
-    header .header-content {
-        flex-direction: column;
-        padding-top: .5em;
-    }
+.light-theme .social-dashboard-content .card:hover,
+.light-theme .overview-content .nat-overview:hover {
+    background: hsl(230, 22%, 74%);
+}
 
-    .dark-theme header, header {
-        height: 250px;
+.light-theme .card-icon p {
+    color: hsl(228, 12%, 44%);
+}
+
+.light-theme .card-desc h1 {
+    color: hsl(230, 17%, 14%);
+}
+
+.light-theme .overview-title {
+    color: hsl(228, 12%, 44%);
+}
+
+.light-theme .overview-content .nat-overview {
+    background: hsl(227, 47%, 96%);
+}
+
+.light-theme .overview-heading p {
+    color: hsl(228, 12%, 44%);
+}
+
+.light-theme .overview-desc p:first-child {
+    color: hsl(230, 17%, 14%);
+}
+
+
+/* media queries */
+@media (min-width: 576px) {
+    header hr {
+        display: none;
     }
 
     header .header-title {
-        width: 100%;
-        padding: 1.5em 0;
-        border-bottom: 1px solid hsl(228, 34%, 66%);
+        width: 70%;
     }
 
-    header .toggle-mode {
-        width: 100%;
-        padding: 1em 0;
+    .toggle-mode {
+        width: 30%;
     }
 
-    #social-dashboard {
-        margin-top: -3.5em;
-        margin-bottom: 0em;
-    }
-
-    .social-dashboard-content {
-        flex-direction: column;
-    }
-
-    .dark-theme .social-dashboard-content .card,
-    .social-dashboard-content .card {
-        width: 100%;
-        margin: 1em 0;
-    }
-
-    .overview-content {
-        flex-direction: column;
+    .toggle-mode .mode-toggler {
+        width: 60%;
+        text-align: right;
     }
     
-    .dark-theme .overview-content .nat-overview,
-    .overview-content .nat-overview {
-        width: 100%;
+    .social-dashboard-content,
+    .overview-content,
+    header .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .social-dashboard-content .card,
+    .overview-content .nat-overview,
+    .light-theme .overview-content .nat-overview
+     {
+        width: 48%;
     }
 }
 
-/*######## dark-theme Mode  ###########*/
-.dark-theme {
-    background: hsl(230, 17%, 14%);
-}
+@media (min-width: 900px) {
+    header .header-title {
+        width: 60%;
+    }
 
-/* header section [dark theme] */
-.dark-theme header {
-    background:hsl(232, 19%, 15%);
-}
+    .toggle-mode .mode-toggler {
+        width: 75%;
+        text-align: right;
+    }
 
-.dark-theme header h2 {
-    color: hsl(0, 0%, 100%);
-}
+    .social-dashboard-content,
+    .overview-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
 
-.dark-theme header .header-content .total-ffw,
-.dark-theme header .header-content .mode-toggler {
-    color: hsl(228, 34%, 66%);
-}
-
-/* dashboard section [dark theme] */
-.dark-theme .social-dashboard-content .card {
-    background: hsl(228, 28%, 20%);
-}
-
-.dark-theme .social-dashboard-content .card:hover {
-    background: hsl(230, 17%, 14%);
-
-}
-
-.dark-theme .overview-content .nat-overview:hover {
-    background: hsl(230, 17%, 14%);
-}
-
-.dark-theme .card-icon p {
-    color: hsl(228, 34%, 66%);
-}
-
-.dark-theme .card-desc h1{
-    font-size: 3em;
-    color: hsl(0, 0%, 100%);
-}
-
-.dark-theme .card-desc p{
-    color: hsl(228, 12%, 44%);
-}
-
-/* overview section [dark theme] */
-.dark-theme .overview-title {
-    color: hsl(0, 0%, 100%);
-}
-
-.dark-theme .overview-content .nat-overview {
-    background: hsl(228, 28%, 20%);
-}
-
-.dark-theme .overview-heading p {
-    color: hsl(228, 34%, 66%);
-}
-
-.dark-theme .overview-desc p:first-child {
-    color: hsl(0, 0%, 100%);
+    .social-dashboard-content .card,
+    .overview-content .nat-overview,
+    .light-theme .overview-content .nat-overview
+     {
+        width: 23%;
+    }
 }
