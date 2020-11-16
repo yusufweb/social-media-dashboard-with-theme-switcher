@@ -256,7 +256,7 @@ header hr {
 /* overview section */
 section#overview {
     width: 100%;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .light-theme .overview-title,
@@ -321,7 +321,6 @@ section#overview {
 }
 
 /*######## light-theme Mode  ###########*/
-/* light theme body */
 .light-theme {
     background: hsl(0, 0%, 100%);
 } 
@@ -373,7 +372,7 @@ section#overview {
 }
 
 
-/* media queries */
+/* media queries [medium screen] */
 @media (min-width: 576px) {
     header hr {
         display: none;
@@ -409,6 +408,7 @@ section#overview {
     }
 }
 
+/* media query [large screen] */
 @media (min-width: 900px) {
     header .header-title {
         width: 60%;
